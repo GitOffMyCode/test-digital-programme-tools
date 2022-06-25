@@ -1,0 +1,74 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Service desk log in - GOV.UK
+{% endblock %}
+
+{% block content %}
+
+
+{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %}
+{{ govukSkipLink({
+  text: "Skip to main content",
+  href: "#content"
+}) }}
+
+<div class="govuk-width-container">
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        COVID-19 Testing Admin Portal
+      </h1>
+    
+      <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+            {% from "govuk/components/input/macro.njk" import govukInput %}
+            {{ govukInput({
+              label: {
+                text: "Email address"
+              },
+              id: "email-address",
+              name: "email-address"
+            }) }}
+          </div>
+        </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+          {{ govukInput({
+            label: {
+              text: "Password"
+            },
+            id: "password",
+            name: "password"
+          }) }}
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+          <p class="govuk-body"><a href="#" class="govuk-link">I have forgotten my password</a></p>
+        </div>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Login"
+          }) }}
+        </div>
+      </div>
+
+     </div>
+  </div>
+
+</div>
+
+{% endblock %}
