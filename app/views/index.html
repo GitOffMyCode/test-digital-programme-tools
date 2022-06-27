@@ -1,40 +1,17 @@
-
-{% extends "layout.html" %}
-
-{% block pageTitle %}
-  DPT Prototypes Index
-{% endblock %}
-
-{% block content %}
-
+{% extends "layout.html" %} {% block pageTitle %} DPT Prototypes Index {%
+endblock %} {% block content %}
 
 <div class="govuk-width-container">
-
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-
       <h1 class="govuk-heading-l">DPT prototypes</h1>
-        
 
-      <h2 class="govuk-heading-m">
-        CTAP journey
-      </h2>
-      <p><a href="/CTAP-index.html">CTAP login</a></p>
+      <h2 class="govuk-heading-m">CTAP journey</h2>
+      <p><a href="/CTAP-login.html">CTAP login</a></p>
 
       <div class="govuk-!-padding-bottom-9"></div>
-    
-      <h3 class="govuk-heading-s">Code debug snippet</h3>
-      <p>This is a good snippet for debugging your code. The snippet will display data that’s been passed by the browser. Both the id and value are displayed. It can help you spot errors in your code.</p>
-      <p>
-        {{ data | dump }}
-       </p>
-
-
-
-     </div>
+    </div>
   </div>
-
 </div>
 
 {% endblock %}
