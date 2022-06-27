@@ -1,17 +1,32 @@
-{% extends "layout.html" %} {% block pageTitle %} DPT Prototypes Index {%
-endblock %} {% block content %}
+{% extends "layout.html" %} 
 
-<div class="govuk-width-container">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">DPT prototypes</h1>
+{% block pageTitle %} DPT Prototypes Index {% endblock %} 
 
-      <h2 class="govuk-heading-m">CTAP journey</h2>
-      <p><a href="/CTAP-login.html">CTAP login</a></p>
+{% block header %}
+  {{ govukHeader({ serviceName: "DPT Prototypes" }) }}
+{% endblock %}
 
-      <div class="govuk-!-padding-bottom-9"></div>
-    </div>
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Prototype index</h1>
+
+      <p class="govuk-body-l">These prototypes are work in progress. </p><p>Please continue to use the <a href="https://app.zeplin.io/project/5e9f07670480db7de98d0d96">designs on Zeplin</a> unless you have specifically been given a link to use.</p>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Covid-19 Testing Admin Portal (CTAP) journey</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li><a href="/CTAP-login.html">Login</a></li>
+        <li><a href="/CTAP-home.html">Home</a></li>
+        <li><a href="/CTAP-barcode-lookup.html">Barcode lookup</a></li>
+        <li><a href="/CTAP-identity-verification.html">Identity verification</a></li>
+        <li><a href="/CTAP-test-information.html">Test information</a></li>
+      </ul>
+
+    <div class="govuk-!-padding-bottom-9"></div>
   </div>
 </div>
+
 
 {% endblock %}

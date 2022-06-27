@@ -20,11 +20,47 @@ $govuk-assets-path: "/govuk/assets/";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-.custom-card {
+// styles for CTAP pages
+.card {
   background: #f3f2f1;
   border-bottom: 3px solid #1d70b8;
 }
 
-.custom-card__heading {
+.card__heading {
   color: #1d70b8;
+}
+
+.panel {
+  background: #1d70b8;
+  padding: 40px 40px 10px 40px;
+  color: #ffffff;
+}
+
+.white-text {
+  color: #ffffff;
+}
+
+.white-circle {
+  background: #ffffff;
+  display: table;
+  text-align: center;
+  border-bottom: none;
+  font-weight: 700;
+  width: 25px;
+  height: 25px;
+  margin: 10px 10px 10px 0px;
+  border-radius: 50%;
+}
+
+.table-header-width {
+  width: 30%;
+}
+
+.table-data-width {
+  width: 65%;
+}
+
+.button-reverse {
+  background: #ffffff;
+  color: #0b0c0c;
 }

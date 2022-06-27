@@ -1,5 +1,12 @@
-{% extends "layout.html" %} {% block pageTitle %} Question page template – {{
-serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block content %}
+{% extends "layout.html" %} 
+
+{% block pageTitle %} Service desk actions - GOV.UK {% endblock %} 
+
+{% block header %}
+  {{ govukHeader({ serviceName: "COVID-19" }) }}
+{% endblock %}
+
+{% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
@@ -14,16 +21,17 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block content %}
       sample barcode.
     </p>
 
-    <!-- nested row and column -->
+    <!-- nested row and column to reflect what is live - this sets the width of the card -->
+    <!-- need to remove the underline on mouseover -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
        
         
-        <a href="#" class="govuk-link--no-underline">
+        <a href="/CTAP-barcode-lookup" class="govuk-link--no-underline">
   
-            <div class="custom-card govuk-!-padding-4 govuk-!-margin-bottom-8">
+            <div class="card govuk-!-padding-4 govuk-!-margin-bottom-8">
       
-            <h3 class="govuk-heading-m custom-card__heading">Look up a subject's barcode</h2>
+            <h3 class="govuk-heading-m card__heading">Look up a subject's barcode</h2>
       
             <p class="govuk-body">Look up a subject's test sample barcode to see if they have registered correctly.</p>  
             </div>
@@ -37,8 +45,8 @@ serviceName }} – GOV.UK Prototype Kit {% endblock %} {% block content %}
     <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-9">
         Log out if you are finished.
       </p>
-  
-      <button class="govuk-button">Log out</button>
+
+      <a href="/CTAP-login" class="govuk-button">Log out</a>
 
   </div>
 </div>
