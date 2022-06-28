@@ -8,30 +8,27 @@
 
 {% block content %} 
 
-{% from "govuk/components/skip-link/macro.njk" import govukSkipLink %} {{ govukSkipLink({ text: "Skip to main content", href: "#content" }) }}
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
     
     <h1 class="govuk-heading-xl">COVID-19 Testing Admin Portal</h1>
 
       <div class="govuk-grid-row">
-        <div
-          class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop"
-        >
-          {% from "govuk/components/input/macro.njk" import govukInput %} {{
-          govukInput({ label: { text: "Email address" }, id: "email-address",
-          name: "email-address" }) }}
+        <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+         {{govukInput({ 
+           label: { text: "Email address" }, 
+             id: "email-address",
+            name: "email-address" }) }}
         </div>
       </div>
 
     <div class="govuk-grid-row">
-      <div
-        class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop"
-      >
-        {% from "govuk/components/input/macro.njk" import govukInput %} {{
-        govukInput({ label: { text: "Password" }, id: "password", name:
-        "password", type: "password" }) }}
+      <div class="govuk-grid-column-one-half govuk-grid-column-one-third-from-desktop">
+       {{govukInput({ 
+         label: { text: "Password" }, 
+         id: "password", 
+         name: "password", 
+         type: "password" }) }}
       </div>
     </div>
 

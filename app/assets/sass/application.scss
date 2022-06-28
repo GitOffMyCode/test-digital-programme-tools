@@ -22,26 +22,26 @@ $govuk-assets-path: "/govuk/assets/";
 
 // styles for CTAP pages
 .card {
-  background: #f3f2f1;
-  border-bottom: 3px solid #1d70b8;
+  background: govuk-colour("light-grey");
+  border-bottom: 3px solid govuk-colour("blue");
 }
 
 .card__heading {
-  color: #1d70b8;
+  color: govuk-colour("blue");
 }
 
 .panel {
-  background: #1d70b8;
+  background: govuk-colour("blue");
   padding: 40px 40px 10px 40px;
-  color: #ffffff;
+  color: govuk-colour("white");
 }
 
 .white-text {
-  color: #ffffff;
+  color: govuk-colour("white");
 }
 
 .white-circle {
-  background: #ffffff;
+  background: govuk-colour("white");
   display: table;
   text-align: center;
   border-bottom: none;
@@ -61,6 +61,6 @@ $govuk-assets-path: "/govuk/assets/";
 }
 
 .button-reverse {
-  background: #ffffff;
-  color: #0b0c0c;
+  background: govuk-colour("white");
+  color: govuk-colour("black");
 }
