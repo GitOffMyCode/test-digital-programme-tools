@@ -1,66 +1,87 @@
-{% extends "layout.html" %} 
+{% extends "layout.html" %} {% block pageTitle %} Test verification - GOV.UK {%
+endblock %} {% block header %} {{ govukHeader({ serviceName: "COVID-19" }) }} {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
 
-{% block pageTitle %} Test verification - GOV.UK {% endblock %} 
-
-{% block header %}
-  {{ govukHeader({ serviceName: "COVID-19" }) }}
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
-{% endblock %}
-
-{% block content %}
-
-<p class="govuk-body"><strong>Sample barcode:</strong> LOK76543212 &nbsp; &nbsp; &nbsp;<a href="/CTAP-barcode-lookup" aria-label="change the sample barcode">Change</a> </p>
+<p class="govuk-body">
+  <strong>Sample barcode:</strong> {{ data["sample-barcode"] }} &nbsp; &nbsp;
+  &nbsp;<a href="/CTAP-barcode-lookup" aria-label="change the sample barcode"
+    >Change</a
+  >
+</p>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
+    <div class="panel">
+      <h2 class="govuk-heading-l white-text">Before you continue</h2>
+      <p class="govuk-!-margin-bottom-3 white-text">
+        You will need to validate who you are speaking to. You will need to ask
+        them for:
+      </p>
 
-  <div class="panel">
-    <h2 class="govuk-heading-l white-text">
-      Before you continue
-    </h2>
-    <p class="govuk-!-margin-bottom-3  white-text">
-    You will need to validate who you are speaking to. You will need to ask them for:
-    </p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell white-circle">1</td>
+            <th
+              scope="col"
+              class="govuk-table__header white-text table-header-width"
+            >
+              Name
+            </th>
+            <td class="govuk-table__cell white-text table-data-width">
+              Jenny Thorp
+            </td>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell white-circle">2</td>
+            <th
+              scope="row"
+              class="govuk-table__header white-text table-header-width"
+            >
+              Date of birth
+            </th>
+            <td class="govuk-table__cell white-text table-data-width">
+              02 February 2000
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell white-circle">3</td>
+            <th
+              scope="row"
+              class="govuk-table__header white-text table-header-width"
+            >
+              Postcode
+            </th>
+            <td class="govuk-table__cell white-text table-data-width">
+              AL5 4LE
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell white-circle">1</td>
-          <th scope="col" class="govuk-table__header white-text table-header-width">Name</th>
-          <td class="govuk-table__cell white-text table-data-width">Jenny Thorp</td>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell white-circle">2</td>
-          <th scope="row" class="govuk-table__header white-text table-header-width">Date of birth</th>
-          <td class="govuk-table__cell white-text table-data-width">02 February 2000</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell white-circle">3</td>
-          <th scope="row" class="govuk-table__header white-text table-header-width">Postcode</th>
-          <td class="govuk-table__cell white-text table-data-width">AL5 4LE</td>
-        </tr>
-      </tbody>
-    </table>
+      <p class="govuk-!-margin-bottom-5 white-text">
+        If any of these answers are incorrect, don't proceed.
+      </p>
 
-    <p class="govuk-!-margin-bottom-5  white-text">
-    If any of these answers are incorrect, don't proceed.
-    </p>
-
-    <form action="/CTAP-test-information" method="post">
-      <button type="submit" class="govuk-button button-reverse govuk-!-margin-right-9" data-module="govuk-button">
-        Continue
-      </button>
-      <a href="#" class="govuk-link govuk-link--inverse govuk-!-margin-left-9">Return to barcode search</a>
-    </form>
-
-
-  </div>
-
+      <form action="/CTAP-test-information" method="post">
+        <button
+          type="submit"
+          class="govuk-button button-reverse govuk-!-margin-right-9"
+          data-module="govuk-button"
+        >
+          Continue
+        </button>
+        <a
+          href="/CTAP-barcode-lookup"
+          class="govuk-link govuk-link--inverse govuk-!-margin-left-9"
+          >Return to barcode search</a
+        >
+      </form>
+    </div>
   </div>
 </div>
 
