@@ -35,7 +35,7 @@ $govuk-assets-path: "/govuk/assets/";
 
 .panel {
   background: govuk-colour("blue");
-  padding: 40px 40px 10px 40px;
+  padding: 40px 40px 40px 40px;
   color: govuk-colour("white");
 }
 
@@ -71,4 +71,13 @@ $govuk-assets-path: "/govuk/assets/";
 .button-reverse:hover {
   background: govuk-colour("light-grey");
   color: govuk-colour("black");
+}
+
+.vertical-align-bottom {
+  vertical-align: bottom;
+  bottom: 0;
+}
+
+.sample-summary-table {
+  width: 55%;
 }

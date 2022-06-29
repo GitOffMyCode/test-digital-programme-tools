@@ -1,12 +1,6 @@
-{% extends "layout.html" %} 
-
-{% block pageTitle %} Service desk actions - GOV.UK {% endblock %} 
-
-{% block header %}
-  {{ govukHeader({ serviceName: "COVID-19" }) }}
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block pageTitle %} Service desk actions - GOV.UK
+{% endblock %} {% block header %} {{ govukHeader({ serviceName: "COVID-19" }) }}
+{% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
@@ -24,26 +18,26 @@
     <!-- nested row and column to reflect what is live - this sets the width of the card -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-half">
-       
-         <div class="card govuk-!-padding-4 govuk-!-margin-bottom-8">
-        <a href="/CTAP-barcode-lookup" class="govuk-link--no-underline">
+        <div class="card govuk-!-padding-4 govuk-!-margin-bottom-8">
+          <a href="/CTAP-barcode-lookup" class="govuk-link--no-underline">
+            <h2 class="govuk-heading-m card__heading">
+              Look up a subject's barcode
+            </h2>
 
-          <h3 class="govuk-heading-m card__heading">Look up a subject's barcode</h2>
-
-          <p class="govuk-body">Look up a subject's test sample barcode to see if they have registered correctly.</p> 
-                </a> 
-          </div>
-    
+            <p class="govuk-body">
+              Look up a subject's test sample barcode to see if they have
+              registered correctly.
+            </p>
+          </a>
+        </div>
       </div>
     </div>
 
-
     <p class="govuk-body govuk-!-font-weight-bold govuk-!-margin-bottom-9">
-        Log out if you are finished.
-      </p>
+      Log out if you are finished.
+    </p>
 
-      <a href="/CTAP-login" class="govuk-button">Log out</a>
-
+    <a href="/CTAP-login" class="govuk-button">Log out</a>
   </div>
 </div>
 

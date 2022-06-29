@@ -1,0 +1,83 @@
+{% extends "layout.html" %} {% block pageTitle %} Test verification - GOV.UK {%
+endblock %} {% block header %} {{ govukHeader({ serviceName: "COVID-19" }) }} {%
+endblock %} {% block beforeContent %}
+<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <p class="govuk-body">
+      <strong>Sample barcode:</strong> {{ data["sample-barcode"] }} &nbsp;
+      &nbsp; &nbsp;<a
+        href="/CTAP-barcode-lookup"
+        aria-label="change the sample barcode"
+        >Change</a
+      >
+    </p>
+    <h1 class="govuk-heading-xl card__heading">Check the subject's identity</h1>
+
+    <p class="nhsuk-body">
+      You need to validate who you are speaking to. Ask them for:
+    </p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Name</dt>
+        <dd class="govuk-summary-list__value">Jenny Thorp</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Date of birth</dt>
+        <dd class="govuk-summary-list__value">02 February 2000</dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">Postcode</dt>
+        <dd class="govuk-summary-list__value">AL5 4LE</dd>
+      </div>
+    </dl>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h2 class="govuk-fieldset__heading">
+            Are all of these details correct?
+          </h2>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="where-do-you-live"
+              name="where-do-you-live"
+              type="radio"
+              value="england"
+            />
+            <label
+              class="govuk-label govuk-radios__label"
+              for="where-do-you-live"
+            >
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input
+              class="govuk-radios__input"
+              id="where-do-you-live-2"
+              name="where-do-you-live"
+              type="radio"
+              value="scotland"
+            />
+            <label
+              class="govuk-label govuk-radios__label"
+              for="where-do-you-live-2"
+            >
+              No
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button class="govuk-button" data-module="govuk-button">Continue</button>
+  </div>
+</div>
+
+{% endblock %}
