@@ -24,9 +24,12 @@ $govuk-assets-path: "/govuk/assets/";
 .card {
   background: govuk-colour("light-grey");
   border-bottom: 3px solid govuk-colour("blue");
+  a:hover {
+    text-decoration: none;
+  }
 }
 
-.card__heading {
+.card .card__heading {
   color: govuk-colour("blue");
 }
 
@@ -62,5 +65,10 @@ $govuk-assets-path: "/govuk/assets/";
 
 .button-reverse {
   background: govuk-colour("white");
+  color: govuk-colour("black");
+}
+
+.button-reverse:hover {
+  background: govuk-colour("light-grey");
   color: govuk-colour("black");
 }
