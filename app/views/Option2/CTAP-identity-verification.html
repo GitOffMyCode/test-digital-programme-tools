@@ -10,7 +10,7 @@ endblock %} {% block beforeContent %}
       <p class="govuk-body white-text">
         <strong>Sample barcode:</strong> {{ data["sample-barcode"] }} &nbsp;
         &nbsp; &nbsp;<a
-          href="/CTAP-barcode-lookup"
+          href="CTAP-barcode-lookup"
           aria-label="change the sample barcode"
           class="govuk-link--inverse"
           >Change</a
@@ -73,7 +73,7 @@ endblock %} {% block beforeContent %}
         If any of these answers are incorrect, don't proceed.
       </p>
 
-      <form action="/CTAP-test-information" method="post">
+      <form action="CTAP-test-information" method="post">
         <button
           type="submit"
           class="govuk-button button-reverse govuk-!-margin-right-9 govuk-!-margin-bottom-0"
@@ -83,7 +83,7 @@ endblock %} {% block beforeContent %}
         </button>
 
         <a
-          href="/CTAP-barcode-lookup-blank"
+          href="CTAP-barcode-lookup-blank"
           class="govuk-link govuk-link--inverse govuk-!-margin-left-9 vertical-align-bottom"
           >Return to barcode search</a
         >

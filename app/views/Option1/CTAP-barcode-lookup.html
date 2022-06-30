@@ -10,19 +10,15 @@ endblock %} {% block beforeContent %}
       Enter test sample barcode
     </h1>
 
-    <form action="/CTAP-identity-verification" method="post" class="form">
+    <form action="CTAP-identity-verification" method="post" class="form">
       <div class="govuk-form-group govuk-input--width-20">
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label" for="sample-barcode">
             Sample barcode
           </label>
         </h1>
-        <input
-          class="govuk-input"
-          id="sample-barcode"
-          name="sample-barcode"
-          type="text"
-        />
+        <input class="govuk-input" id="sample-barcode" name="sample-barcode"
+        value="{{ data["sample-barcode"] }}" type="text" />
       </div>
 
       <button

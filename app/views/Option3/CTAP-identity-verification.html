@@ -9,7 +9,7 @@ endblock %} {% block beforeContent %}
     <p class="govuk-body">
       <strong>Sample barcode:</strong> {{ data["sample-barcode"] }} &nbsp;
       &nbsp; &nbsp;<a
-        href="/CTAP-barcode-lookup"
+        href="CTAP-barcode-lookup"
         aria-label="change the sample barcode"
         >Change</a
       >
@@ -35,8 +35,10 @@ endblock %} {% block beforeContent %}
       </div>
     </dl>
 
-    <div class="govuk-form-group">
+    <div class="govuk-form-group">    
+      <form action="/CTAP-check-identity" method="post">
       <fieldset class="govuk-fieldset">
+        
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
           <h2 class="govuk-fieldset__heading">
             Are all of these details correct?
@@ -46,14 +48,14 @@ endblock %} {% block beforeContent %}
           <div class="govuk-radios__item">
             <input
               class="govuk-radios__input"
-              id="where-do-you-live"
-              name="where-do-you-live"
+              id="yes"
+              name="CTAP-check-identity"
               type="radio"
-              value="england"
+              value="yes"
             />
             <label
               class="govuk-label govuk-radios__label"
-              for="where-do-you-live"
+              for="yes"
             >
               Yes
             </label>
@@ -61,14 +63,14 @@ endblock %} {% block beforeContent %}
           <div class="govuk-radios__item">
             <input
               class="govuk-radios__input"
-              id="where-do-you-live-2"
-              name="where-do-you-live"
+              id="no"
+              name="CTAP-check-identity"
               type="radio"
-              value="scotland"
+              value="no"
             />
             <label
               class="govuk-label govuk-radios__label"
-              for="where-do-you-live-2"
+              for="no"
             >
               No
             </label>

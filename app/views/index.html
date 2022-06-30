@@ -4,12 +4,14 @@ endblock %} {% block header %} {{ govukHeader({ serviceName: "DPT Prototypes" })
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    {#
     <h1 class="govuk-heading-l">DPT Prototype index</h1>
-
+    #} {#
     <p class="govuk-body-l">
       These prototypes are work in progress and are only temporarily hosted
       here.
     </p>
+    #} {#
     <p>
       Please continue to use the
       <a href="https://app.zeplin.io/project/5e9f07670480db7de98d0d96"
@@ -17,31 +19,17 @@ endblock %} {% block header %} {{ govukHeader({ serviceName: "DPT Prototypes" })
       >
       unless you have specifically been given a link to use.
     </p>
+    #}
 
-    <h2 class="govuk-heading-m govuk-!-margin-top-9">
-      Covid-19 Testing Admin Portal (CTAP)
+    <span class="govuk-caption-l">Covid-19 Testing Admin Portal</span>
+    <h2 class="govuk-heading-m">
+      Adding sample barcode to identity verification screen
     </h2>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li><a href="/CTAP-login.html">Login</a></li>
-      <li><a href="/CTAP-home.html">Home</a></li>
-      <li><a href="/CTAP-barcode-lookup.html">Barcode lookup</a></li>
-      <li>
-        <a href="/CTAP-identity-verification.html">Identity verification</a>
-      </li>
-      <li>
-        <a href="/CTAP-identity-verification-option2.html"
-          >Identity verification - Option 2</a
-        >
-      </li>
-      <li>
-        <a href="/CTAP-identity-verification-option3.html"
-          >Identity verification - Option 3</a
-        >
-      </li>
-      <li>
-        <a href="/CTAP-test-information.html">Test information</a>
-      </li>
+      <li><a href="Option1/CTAP-home.html">Option 1</a></li>
+      <li><a href="Option2/CTAP-home.html">Option 2</a></li>
+      <li><a href="Option3/CTAP-home.html">Option 3</a></li>
     </ul>
 
     <div class="govuk-!-padding-bottom-9"></div>
