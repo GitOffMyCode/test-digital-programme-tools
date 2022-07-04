@@ -6,8 +6,8 @@ endblock %} {% block beforeContent %}
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-three-quarters">
-
- <p class="govuk-body">
+    <h1 class="govuk-heading-xl card__heading govuk-!-margin-bottom-4">Check the subject's identity</h1>
+        <p class="govuk-body">
       <strong>Sample barcode:</strong> {{ data["sample-barcode"] }} &nbsp;
       &nbsp; &nbsp;<a
         href="CTAP-barcode-lookup"
@@ -16,10 +16,7 @@ endblock %} {% block beforeContent %}
       >
     </p>
 
-    <h1 class="govuk-heading-xl card__heading">Check the subject's identity</h1>
-       
-
-    <p class="nhsuk-body">
+    <p class="nhsuk-body govuk-!-margin-top-9">
       You need to validate who you are speaking to. Ask them for:
     </p>
 
