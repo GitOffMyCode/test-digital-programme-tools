@@ -63,25 +63,20 @@ endblock %} {% block beforeContent %}
         </tbody>
       </table>
 
-      <p class="govuk-!-margin-bottom-5 white-text">
+      <p class="govuk-!-margin-bottom-7 white-text">
         If any of these answers are incorrect, don't proceed.
       </p>
 
       <form action="CTAP-test-information" method="post">
-        <button
-          type="submit"
-          class="govuk-button button-reverse govuk-!-margin-right-9 govuk-!-margin-bottom-0"
-          data-module="govuk-button"
-        >
+      <div class="govuk-button-group govuk-!-margin-bottom-0">
+        <button class="govuk-button button-reverse" data-module="govuk-button">
           Continue
         </button>
-
-        <a
-          href="CTAP-barcode-lookup-blank"
-          class="govuk-link govuk-link--inverse govuk-!-margin-left-9 vertical-align-bottom"
-          >Return to barcode search</a
-        >
       </form>
+
+        <a href="CTAP-barcode-lookup-blank" class="govuk-link govuk-link--inverse govuk-!-margin-left-3">Return to barcode search</a>
+      </div>
+
     </div>
   </div>
 </div>
